@@ -1,25 +1,22 @@
 import "./App.css";
-
+import Post from "./Post";
+import Header from "./Header";
+import { Route, Routes } from "react-router-dom";
 function App() {
   return (
-    <main>
-      <header>
-        <a href="" className="logo">
-          My Blog
-        </a>
-        <nav>
-          <a href="">Login</a>
-          <a href="">Register</a>
-        </nav>
-      </header>
-      <div className="entry">
-        <img src="image\Easy(6).png " alt="" />
-        <h2>Watermelon Blog</h2>
-        <p>
-          WOW so good and testy looks awesome having fun with this water melon
-        </p>
-      </div>
-    </main>
+    <Routes>
+      <Route
+        index
+        element={
+          <main>
+            <Header />
+            <Post />
+            <Post />
+            <Post />
+          </main>
+        }
+      />
+    </Routes>
   );
 }
 
